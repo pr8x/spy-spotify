@@ -274,7 +274,7 @@ namespace EspionSpotify
             {
                 case MediaFormat.Mp3:
                     var supportedWaveFormat = GetWaveFormatMP3Supported(waveFormat);
-                    return new LameMP3FileWriter(stream, supportedWaveFormat, _userSettings.Bitrate);
+                    return new LameMP3FileWriter(stream, supportedWaveFormat, 320);
                 case MediaFormat.Wav:
                     return new WaveFileWriter(stream, waveFormat);
                 default:
